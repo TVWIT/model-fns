@@ -1,6 +1,6 @@
 # model
 
-Functions for reducing a log of events into application state.
+Functions for modeling application state from an event log.
 
 ## Api
 
