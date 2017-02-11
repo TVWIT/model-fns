@@ -3,9 +3,11 @@ var Crud = require('./lib/crud');
 
 function Data (indexBy) {
     var crud = Crud(indexBy);
+
     function data () {
         return { data: {} };
     }
+
     data.update = ['get', 'edit', 'add', 'delete']
         .reduce(function (acc, method) {
             acc[method] = function (state, ev) {
