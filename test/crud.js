@@ -1,5 +1,5 @@
 var test = require('tape');
-var Crud = require('../lib/crud');
+var Crud = require('../lib/collection');
 
 test('crud functions', function (t) {
     t.plan(4);

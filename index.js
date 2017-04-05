@@ -1,12 +1,10 @@
 var xtend = require('xtend');
-// var Ev = require('event-manifest/event');
-// var Update = require('./lib/update');
 var Request = require('./request');
 var Errors = require('./errors');
-var Data = require('./data');
+var Collection = require('./collection');
 
 function Model (indexBy) {
-    var Crud = Data(indexBy);
+    var Crud = Collection(indexBy);
     function model () {
         return xtend(Request(), Errors(), Crud());
     }

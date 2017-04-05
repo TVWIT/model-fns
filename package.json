@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "deps": "dependency-check package.json && dependency-check package.json --unused --entry test/*.js -i dependency-check -i eslint -i eslint-config-invintus -i tap-spec",
     "preversion": "npm run lint && npm run deps && npm test",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish",
     "test": "tape test/*.js | tap-spec"
   },
   "dependencies": {
@@ -39,6 +39,5 @@
   "bugs": {
     "url": "https://github.com/tvwit/model-fns/issues"
   },
-  "homepage": "https://github.com/tvwit/model-fns#readme",
-  "private": true
+  "homepage": "https://github.com/tvwit/model-fns#readme"
 }

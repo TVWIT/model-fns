@@ -1,8 +1,8 @@
 var xtend = require('xtend');
-var Crud = require('./lib/crud');
+var Collection = require('./lib/collection');
 
 function Data (indexBy) {
-    var crud = Crud(indexBy);
+    var collection = Collection(indexBy);
 
     function data () {
         return { data: {} };
@@ -12,7 +12,7 @@ function Data (indexBy) {
         .reduce(function (acc, method) {
             acc[method] = function (state, ev) {
                 return xtend(state, {
-                    data: crud[method](state.data, ev)
+                    data: collection[method](state.data, ev)
                 });
             };
             return acc;
